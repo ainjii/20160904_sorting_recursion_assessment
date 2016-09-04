@@ -1,0 +1,55 @@
+In your own words, what is Recursion?
+- Recursion is a strategy used in programming to break big problems down into similarly-solved subsets. By breaking the problem down in this way, solving certain kinds of problems becomes easier.
+
+Why is it necessary to have a Base Case?
+- The base case represents the smallest piece of work you can possibly do. You have to have a base case as a way to say 'I have broken this problem down as small as I can go, and here's the solution generated from that piece of work'. After you return from the base case, that's when you start coming back out of the recursive hole. Without a base case you might never get out.
+
+What is a Graph?
+- A graph is a data structure we use to show nodes (which hold pieces of data) and the relationships that exist between those nodes.
+
+How is a Graph different from a Tree?
+- A tree is a specific type of graph that doesn't have any cycles. A graph may also be directed arbitrarily, while trees have a distinct structure based on one-direction parent-child relationships.
+
+Give an example of somthing that would be good to model with a Graph.
+- Facebook users (where each edge represents a friendship).
+
+
+Fill in the runtimes for the following actions for the table below:
+(I suggest you read this is Sublime, or some other uniformly spaced text editor)
+
+Data Structure                       Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)                  O(1)    O(n)    O(1)     O(n)    O(n)    O(1)
+Linked List                          O(n)    O(n)    O(1)     O(1)    O(1)    O(n)
+Doubly-Linked List                   O(n)    O(n)    O(1)     O(1)    O(1)    O(1)
+Queue (as Array)                      X       X      O(1)      X      O(n)     X
+Queue (as LL or DLL)                  X       X      O(1)      X      O(1)     X
+Stack (as Array, LL, or DLL)          X       X      O(1)      X       X      O(1)
+Deque (as DLL)                        X       X      O(1)     O(1)    O(1)    O(1)
+
+
+
+Fill in Runtime and Memory:
+
+The answers for Dictionary have been provided; you should fill in the rest:
+
+Data Structure           Get    Add    Delete  Iterate   Memory
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)     medium
+Set (Hash Map)          O(1)    O(1)    O(1)    O(n)     medium
+Binary Search Tree      O(logn) O(logn) O(logn) O(1)     low
+Tree                    O(n)    O(n)    O(n)    O(1)     low
+
+
+Describe in words how the Bubble Sort algorithm works.
+- For each index 0 through (length-1) in the list, compare the item stored in that index with the item stored in (index + 1). If the first is larger than the second, swap them. Repeat n times (unless you've optimized). This sort slowly bubbles larger values to the right.
+
+Describe in words how the Merge Sort algorithm works.
+- Merge sort uses recursion to split a list into 2 smaller lists, until the list size is n=1. Then, it takes two of those lists and merges them together, repeatedly until there is only one list again. During the merge, the first item of each list is checked, and the smaller one gets added to the new (sorted) list first. Repeat until both lists are empty, and all values are in the sorted list.
+
+Describe in words how the Quick Sort algorithm works.
+- First, choose a random pivot. Move that pivot to index 0. For each index 1 through (length-1), compare the value stored at that index with the pivot. If the value to the right of the pivot is larger than the pivot, do nothing and keep track of the left-most large number (it's a divider between the small and large numbers). If the value is smaller, swap the pivot with the smaller number first, and then swap the smaller number with the divider. When the pivot reaches the end, swap it with the divder. Then split the list into 2 sublist -- one from index 0 through (not including) pivot, and one from (not including) pivot through the end. Repeat with each sublist.
+
+Give an instance when you would use git branching.
+- When you are experimenting with a new feature that you don't want on the master branch yet.
+
+What is a pull request?
+- A pull requests let's other programmers know that you want to submit changes to their code. The person in charge of the project will then review your change and either accept (upstream it) or request changes.
